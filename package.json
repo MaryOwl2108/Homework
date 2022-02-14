@@ -2,7 +2,7 @@
   "scripts": {
     
     
-    "clean:reports": "if exist cypress\\reports rmdir /s/q cypress\\reports && mkdir cypress\\reports mkdir cypress\\reports\\mochareports",
+    "clean:reports": "rm -R -f cypress/reports && mkdir cypress/reports && mkdir cypress/reports/mochareports ",
     
     "pretest": "npm run clean:reports",
     "scripts": "cypress run --reporter mocha-allure-reporter",
