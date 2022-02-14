@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "test": "./node_modules/.bin/cypress run --spec 'cypress/integration/test_spec.js' --reporter mocha-allure-reporter",
+    "test": "cypress run --reporter mocha-allure-reporter",
     "report": "./node_modules/.bin/allure generate allure-results --clean -o allure-report"
   },
   "devDependencies": {
