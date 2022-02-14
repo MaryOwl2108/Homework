@@ -10,5 +10,6 @@
         "json": true
       }
     },
-    "screenshotOnRunFailure": true
+    "screenshotOnRunFailure": true,
+    "screenshotsFolder": "cypress/reports/mochareports/assets"
 }
