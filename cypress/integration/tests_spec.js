@@ -22,7 +22,7 @@ const homepage = new Homepage()
 
     it('contacts', () => {
         homepage.contactPage().click();
-        homepage.telNumber().should('contain', 'Телефон: +7 (495) 514-81-35, с 10:00 до 19:00')
+        homepage.telNumber().should('contain', 'НЕ!!!!! Телефон: +7 (495) 514-81-35, с 10:00 до 19:00')
     });
 
 });
