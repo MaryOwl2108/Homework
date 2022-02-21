@@ -22,7 +22,7 @@ const homepage = new Homepage()
 
     it('contacts FAILED TEST', () => {
         homepage.contactPage().click();
-        homepage.telNumber().should('contain', 'Зворотній')
+        homepage.telNumber().should('contain', 'текст')
     });
 
 });
