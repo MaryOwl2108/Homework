@@ -1,6 +1,6 @@
 import {Homepage} from "../page-objects/page";
 
-describe ('Sign Up tests', () => {
+describe ('tests', () => {
 const homepage = new Homepage()
 
     beforeEach (() => {
@@ -13,7 +13,7 @@ const homepage = new Homepage()
     });
 
     it('searching', () => {
-        homepage.searchField();
+        homepage.searchField().click();
         cy.get('.form-control').click().type('1234');
         homepage.searchButton().click();
         homepage.searchResults().should('contain', 'Пошук на сайті')
@@ -22,7 +22,7 @@ const homepage = new Homepage()
 
     it('contacts FAILED TEST', () => {
         homepage.contactPage().click();
-        homepage.telNumber().should('contain', 'какой-то текст')
+        homepage.telNumber().should('contain', 'Зворотній')
     });
 
 });
