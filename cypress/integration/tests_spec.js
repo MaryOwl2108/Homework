@@ -4,25 +4,25 @@ describe ('Sign Up tests', () => {
 const homepage = new Homepage()
 
     beforeEach (() => {
-        cy.visit('http://japan.timelot.ru/');
+        cy.visit('https://zp.gov.ua/uk');
     })
 
     it('Elements existance', () => {
-        homepage.image().should('exist');
         homepage.logo().should('exist');
         homepage.searchField().should('exist');
     });
 
     it('searching', () => {
-        homepage.searchField().click().type('1234');
+        homepage.searchField();
+        cy.get('.form-control').click().type('1234');
         homepage.searchButton().click();
-        homepage.searchResults().should('contain', 'Результаты поиска')
+        homepage.searchResults().should('contain', 'Пошук на сайті')
         
     });
 
     it('contacts FAILED TEST', () => {
         homepage.contactPage().click();
-        homepage.telNumber().should('contain', 'НЕ!!!!! Телефон: +7 (495) 514-81-35, с 10:00 до 19:00')
+        homepage.telNumber().should('contain', 'какой-то текст')
     });
 
 });
